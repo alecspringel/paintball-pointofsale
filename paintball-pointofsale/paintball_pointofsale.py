@@ -1,4 +1,3 @@
-import tkinter.ttk as ttk
 from openpyxl import load_workbook
 from main_window import *
 
