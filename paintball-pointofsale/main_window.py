@@ -1,4 +1,5 @@
 import tkinter as tk
+import pickle
 from group import Group, Player, Transaction
 from create_group_window import CreateGroupWindow
 from group_detail_window import GroupDetailWindow
@@ -13,7 +14,12 @@ class MainWindow:
     def __init__(self, excel_enabled):
         self.window = tk.Tk()
         self.excel_enabled = excel_enabled
-        self.active_groups = []
+        backup = []
+        with open("groupBackup.txt", "rb") as f:
+            backup = pickle.load(f)
+        if(type(backup) is not list):
+            backup = []
+        self.active_groups = backup
         self.total = 0.0
         self.load_static_UI()
         self.load_groups_into_window()
@@ -43,6 +49,10 @@ class MainWindow:
         widget_list = _list
         for item in widget_list:
             item.grid_forget()
+        #---
+        with open("groupBackup.txt", "wb") as f:
+            pickle.dump(self.active_groups, f)
+        #---
         self.load_static_UI()
         self.load_groups_into_window()
 
