@@ -1,1 +1,2 @@
 openpyxl==3.03
+pickle==3.6
