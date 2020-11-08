@@ -2,7 +2,7 @@
 A simple point of sale system for paintball fields that manages groups, players, and transactions with exports to Microsoft Excel.  
   
 ## Why?
-During my Junior and Senior year of college, I worked at a small paintball field near my school. The owner of the field would write hundreds of names down each day, tally inventory that had been moved, and record transactions with pen and paper. This program is for other small field owners who need a way to keep track of their customers and sales.  
+During my Sophomore year of college, I worked at a small paintball field near my school. The owner of the field would write hundreds of names down each day, tally inventory that had been moved, and record transactions with pen and paper. This program is for other small field owners who need a way to keep track of their customers and sales.  
   
 ## Usage
 ### Getting Started
